@@ -1,0 +1,52 @@
+<% include partials/header.ejs %>
+
+    <div class="ui container" style="margin-top: 20px;">
+        <h1 class="ui large header">Welco</h1>
+
+        <div class="ui secondary pointing menu">
+            <a class="item active">
+                Home
+            </a>
+            <a class="item">
+                Messages
+            </a>
+            <a class="item">
+                Friends
+            </a>
+            <div class="right menu">
+                <a class="ui item">
+                    Logout
+                </a>
+            </div>
+        </div>
+        <div class="ui segment">
+            <p></p>
+        </div>
+
+        <% if (items.length > 0) { %>
+
+        <table class="ui celled table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Expiry Date</th>
+                    <th>Amount left</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <% items.forEach((item, index) => { %>
+
+                <tr>
+                    <td data-label="Name"><%= item.name %></td>
+                    <td data-label="Expiry Date">26</td>
+                    <td data-label="Amount left">Engineer</td>
+                </tr>
+
+                <% }) %>
+            </tbody>
+        </table>
+        <% } %>
+    </div>
+
+<% include partials/footer.ejs %>
