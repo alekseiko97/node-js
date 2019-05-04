@@ -1,5 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const express = require('express');
+const PORT = process.env.PORT || 3000;
 const app = express();
 const router = express.Router();
 const uri = "mongodb+srv://alekseiko97:Dofkrudwod7@cluster0-zy0vf.gcp.mongodb.net/test?retryWrites=true";
@@ -33,7 +34,7 @@ router.get('/', function( req, res ) {
 
 app.use('/', router);
 
-app.listen(8080, function() {
-    console.log("Application is running on port 8080");
+app.listen(PORT, function() {
+    console.log("Application is running on port " + PORT);
 });
 
